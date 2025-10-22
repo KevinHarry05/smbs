@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { NODE_VERSION = "22.21.0" }
+
+# Use Netlify's Next.js plugin for proper static/server handling
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Optional: Increase memory for builds if you see OOM errors
+# [build.environment]
+#   NODE_OPTIONS = "--max-old-space-size=4096"
